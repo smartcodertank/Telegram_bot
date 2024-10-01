@@ -16,32 +16,16 @@ using System.Collections.Generic;
 
 namespace TelegramBot.Builders
 {
-    /// <summary>
-    /// A builder for bot application and services.
-    /// </summary>
+    
     public class BotBuilder
     {
-        /// <summary>
-        /// A collection of services for the application to compose. This is useful for adding user provided or framework provided services.
-        /// </summary>
+        
         public IServiceCollection Services { get; }
 
-        /// <summary>
-        /// A collection of configuration providers for the application to compose. This is useful for adding new configuration sources and providers.
-        /// </summary>
         public ConfigurationManager Configuration { get; }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BotBuilder"/> class with preconfigured defaults.
-        /// </summary>
-        /// <returns>The <see cref="BotBuilder"/>.</returns>
         public BotBuilder() : this(Array.Empty<string>()) { }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BotBuilder"/> class with preconfigured defaults.
-        /// </summary>
-        /// <param name="args">The command line arguments.</param>
-        /// <returns>The <see cref="BotBuilder"/>.</returns>
         public BotBuilder(params string[] args)
         {
             Services = new ServiceCollection();
